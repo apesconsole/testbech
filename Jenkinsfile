@@ -2,6 +2,7 @@ node {
 
    stage('SCM Checkout'){
     echo 'Clone repo'
+    git branch 'main', 
 	git 'https://github.com/apesconsole/testbech.git'
    
    }
