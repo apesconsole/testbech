@@ -7,8 +7,10 @@ node {
    
    stage('Mvn Package'){
 	   echo 'Build using maven'
-	
-	   sh 'mvnw clean install'
+		withMaven(
+			maven: 'maven'
+		)
+	    sh 'mvn clean install'
    }
    
 }
